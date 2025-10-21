@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Proyectos - Gregoriodebusoeldiprecocopreel</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #c7ecee, #dff9fb);
+      color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0984e3;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 800px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .step {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background-color: #74b9ff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0984e3;
+    }
+
+    .content {
+      margin-top: 0.8rem;
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Método de Proyectos</h1>
+    <p>Explicación paso a paso del método de proyectos</p>
+  </header>
+
+  <main>
+    <div class="step">
+      <button onclick="toggleContent(1)">1️⃣ Detectar la necesidad o el problema</button>
+      <div class="content" id="content1">Identifica qué problema o necesidad quieres resolver.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(2)">2️⃣ Buscar información</button>
+      <div class="content" id="content2">Investiga sobre el tema y reúne datos que te ayuden a comprender mejor la situación.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(3)">3️⃣ Proponer soluciones posibles</button>
+      <div class="content" id="content3">Piensa en distintas alternativas o formas de resolver el problema.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(4)">4️⃣ Elegir una solución</button>
+      <div class="content" id="content4">Selecciona la opción más viable y eficaz.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(5)">5️⃣ Diseñar en papel (planos, bocetos, horarios)</button>
+      <div class="content" id="content5">Dibuja o planifica cómo será tu proyecto antes de construirlo.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(6)">6️⃣ Preparar materiales o herramientas</button>
+      <div class="content" id="content6">Reúne todo lo que necesitarás para llevar a cabo el proyecto.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(7)">7️⃣ Construir el proyecto</button>
+      <div class="content" id="content7">Pon manos a la obra y crea el proyecto según lo planificado.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(8)">8️⃣ Comprobar y evaluar</button>
+      <div class="content" id="content8">Revisa si tu proyecto funciona correctamente o necesita mejoras.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(9)">9️⃣ Presentar el proyecto</button>
+      <div class="content" id="content9">Muestra el resultado final y explica cómo lo realizaste.</div>
+    </div>
+
+    <div class="step">
+      <button onclick="toggleContent(10)">🔟 Elaborar la memoria del proyecto</button>
+      <div class="content" id="content10">Redacta un informe donde describas todo el proceso, los resultados y conclusiones.</div>
+    </div>
+  </main>
+
+  <script>
+    function toggleContent(num) {
+      const content = document.getElementById('content' + num);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
